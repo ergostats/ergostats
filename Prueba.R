@@ -67,7 +67,7 @@ mrussia = mean(datos$russia)
 meurope = mean(datos$europe)
 
 
-
+# operar pof grupos
 
 
 
@@ -79,7 +79,7 @@ meurope = mean(datos$europe)
 
 library(imputeTS)
 Newdata = na_locf(datos, option="nocb")
-View(Newdata)
+View(Newdata) # No dejar funciones interactivas
 #Newdata is the new dataframe for the richest 10% of households with imputation data.
 
 
@@ -90,7 +90,7 @@ View(Newdata)
 
 
 
-#3.- 
+#3.- Solo cargamos una vez
 #Plot variables of each country
 library(ggplot2)
 library(ggpubr)
@@ -147,7 +147,7 @@ plot(f6)
 require(ggpubr)
 ggpubr = ggarrange(f1,f2,f3,f4,f5,f6, labels=c("Brazil", "China", "Europe", "India","Russia", "US-Canada"))
 plot(ggpubr)
-
+# Faceting
 
 
 
@@ -165,7 +165,7 @@ ggplot(data = Newdata, aes(x = Year)) +
        y = "Income(in million dollars)",
        colour = "Country")
 
-
+# Operar pof grupos 
 
 
 
@@ -192,7 +192,7 @@ data_long = data_long[order(data_long$Year),]
 #to round the numbers in the variable topshares, use:
 round(data_long$topshares,1)
 View(data_long)
-
+# usar pivots
 
 #Plot of the data in long  format
 #Obtain the figure in another window
@@ -223,7 +223,7 @@ sum(is.na(Newdata1))
 #To imput missing values, I changed the dataframe from long to a wide format
 data_large = spread(Newdata1, country, bottomshares)
 View(data_large)
-
+# tidyr
 
 
 #to found the variable with missing values, use:
