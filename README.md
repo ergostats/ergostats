@@ -5,5 +5,5 @@
 - 📫 How to reach me please find me in:
   - Facebook: @ergostats
   - Twittter: @ergostats
-  - Gmail: cdiergostats@gmail.com   
+  - Gmail: administracion@ergostats.org   
 
